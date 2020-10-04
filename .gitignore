@@ -23,3 +23,8 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 coverage
+
+/config/credentials/development.key
+/config/credentials/development.yml.enc
+
+/config/credentials/production.key
