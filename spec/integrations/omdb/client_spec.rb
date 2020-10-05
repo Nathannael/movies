@@ -12,7 +12,7 @@ RSpec.describe OMDb::Client do
     context 'when API is available' do
       before do
         stub_request(:get, 'www.omdbapi.com')
-          .with(query: query.merge({apikey: api_key}) )
+          .with(query: query.merge({ apikey: api_key }))
           .to_return(body: successful_response)
       end
 
@@ -30,7 +30,7 @@ RSpec.describe OMDb::Client do
 
       before do
         stub_request(:get, 'www.omdbapi.com')
-          .with(query: query.merge({apikey: api_key}) )
+          .with(query: query.merge({ apikey: api_key }) )
           .to_raise(error)
       end
 
@@ -54,7 +54,7 @@ RSpec.describe OMDb::Client do
   end
 
   describe '.find_by_name' do
-    let(:name) { Faker::Movie }
+    let(:name) { "avatar" }
 
     it_behaves_like 'endpoint' do
       let(:query) { { t: name } }
@@ -63,7 +63,7 @@ RSpec.describe OMDb::Client do
   end
 
   describe '.search' do
-    let(:term) { Faker::Movie }
+    let(:term) { "avatar" }
 
     it_behaves_like 'endpoint' do
       let(:query) { { s: term } }
