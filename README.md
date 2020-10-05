@@ -38,3 +38,19 @@ Feche o editor, e deve ser criado no sistema os arquivos `config/credentials/dev
 ```bash
 rails s
 ```
+
+## Exemplos de teste:
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/68d53cf26b0100a74820)
+
+### Para o endpoint de busca pelo ID
+
+```
+GET localhost:3000/api/v1/movies/tt8946378
+```
+
+### Para o endpoint de pesquisa
+
+```
+GET localhost:3000/api/v1/movies?title=knives+out
+```
